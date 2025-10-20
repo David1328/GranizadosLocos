@@ -1,12 +1,68 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi primera página</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrusel Responsive</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #6a0dad, #a64ddb);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .carousel-container {
+      flex: 1 0 70%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+    }
+    footer {
+      height: 30%;
+      background: rgba(0,0,0,0.2);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>¡Hola mundo!</h1>
-    <p>Este es un párrafo de ejemplo. Nicolas vende granizados</p>
+  <div class="carousel-container">
+    <div class="slides" id="slides">
+      <div class="slide">Imagen 1</div>
+      <div class="slide">Imagen 2</div>
+      <div class="slide">Imagen 3</div>
+    </div>
+  </div>
+  <footer>
+    <p>Contacto: contacto@ejemplo.com | Tel: +57 000 000 0000</p>
+  </footer>
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    setInterval(() => {
+      index = (index + 1) % 3;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
 </body>
 </html>
-
