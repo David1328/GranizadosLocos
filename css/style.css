@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #6a0dad, #a64ddb);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    }
+    .carousel-container {
+    flex: 1 0 70%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+    }
+    .slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    object-fit: cover;
+    }
+    .titulo{
+        margin-bottom: 4%;
+        font-family: cursive;
+        font-size: 3vw;
+        display: flex;
+        color: #fff;
+        justify-content: center;
+    }
+    
+    footer {
+    height: 30%;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    }

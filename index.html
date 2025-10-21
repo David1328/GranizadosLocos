@@ -2,67 +2,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrusel Responsive</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #6a0dad, #a64ddb);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .carousel-container {
-      flex: 1 0 70%;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .slides {
-      display: flex;
-      width: 300%;
-      transition: transform 0.5s ease;
-    }
-    .slide {
-      min-width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: white;
-    }
-    footer {
-      height: 30%;
-      background: rgba(0,0,0,0.2);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+  <title>GRANIZADOS LOCOS</title>
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
+  <div class="titulo">GRANIZADOS LOCOS</div>
   <div class="carousel-container">
     <div class="slides" id="slides">
-      <div class="slide">Imagen 1</div>
-      <div class="slide">Imagen 2</div>
-      <div class="slide">Imagen 3</div>
+      <div class="slide">
+        <img src="img/Granizado1.jpeg">
+      </div>
+      <div class="slide">
+        <img src="img/Granizado2.jpeg">
+      </div>
+      <div class="slide">
+        <img src="img/Granizado3.jpeg">
+      </div>
+      <div class="slide">
+        <img src="img/Granizado4.png">
+      </div>
     </div>
   </div>
   <footer>
-    <p>Contacto: contacto@ejemplo.com | Tel: +57 000 000 0000</p>
+    <p>integrantes: David santiago Hernández Hernández,
+      Santiago Valencia Soto,
+      Nicolás Vargas soto | Tel: +57 313 831 3908</p>
   </footer>
-  <script>
-    let index = 0;
-    const slides = document.getElementById('slides');
-    setInterval(() => {
-      index = (index + 1) % 3;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
-  </script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
